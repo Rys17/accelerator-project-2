@@ -43,3 +43,9 @@ a {
     padding: 0 120px;
   }
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
