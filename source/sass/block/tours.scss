@@ -13,22 +13,21 @@
 
 .tours__info-list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 12px 5px;
   align-items: center;
-  justify-content: center;
+  margin-bottom: 15px;
 }
 
 .tours__info-item {
   display: flex;
+
 }
 
 .tours__info-item:nth-child(1) {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 5px;
-  width: 90px;
-  height: 28px;
-  background-color: $primary-blue;
 
   @media (min-width: $tablet-width) {
     padding-right: 45px;
@@ -44,10 +43,34 @@
 }
 
 .tours__info-text {
+
+
   padding-left: 12px;
 
+
   &--place {
-    padding-left: 6px;
+    position: relative;
+    width: min-content;
+    margin: 0;
+    padding: 7px 13px 9px 34px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    color: $primary-white;
+    background-color: $primary-blue;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      width: 9px;
+      height: 12px;
+      mask-image: url("/__spritemap#sprite-pin-filled-view");
+      mask-repeat: no-repeat;
+      background-color: $primary-white;
+      translate: 0 -50%;
+    }
   }
 }
 
@@ -103,9 +126,35 @@
 
 
 .tours__title-card {
+
+  position: relative;
+  margin: 0;
+  margin-bottom: 30px;
   font-size: 24px;
-  line-height: 28px;
   font-weight: 700;
+  line-height: 28px;
+  color: #ffffff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    width: 80px;
+    height: 1px;
+    background-color: $white20;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 270px;
+    margin-bottom: 29px;
+
+    &::before {
+      bottom: -15px;
+    }
+  }
+
+
 }
 
 .tours__data {
@@ -122,16 +171,26 @@
   }
 }
 
+.tours__data-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+}
+
 .tours__data-item-text {
+
   font-size: 12px;
   line-height: 12px;
   font-weight: 300;
+  margin: 0;
 }
 
 .tours__data-item-info {
   font-size: 13px;
   line-height: 13px;
   font-weight: 700;
+  margin: 0;
 }
 
 .tours__card {

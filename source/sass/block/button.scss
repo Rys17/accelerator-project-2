@@ -1,11 +1,30 @@
+
 .button {
   display: block;
-  text-decoration: none;
+  padding: 20px;
+  margin: 0 auto;
+  font-family: $primary-font;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
   text-align: center;
   color: $primary-white;
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: 500;
+  text-decoration: none;
   background-color: $primary-blue;
 
+  &:hover {
+    color: $secondary-blue;
+    border: 1px solid $secondary-blue;
+    background-color: $primary-white;
+  }
+
+  &:focus-visible {
+    color: $secondary-blue;
+    background-color: $primary-white;
+  }
+
+  &:active {
+    color: $primary-white;
+    background-color: $secondary-blue;
+  }
 }
