@@ -2,6 +2,7 @@
   position: relative;
 
   &::before {
+    position: absolute;
     content: attr(data-name) / "";
     bottom: 12px;
     left: 0;

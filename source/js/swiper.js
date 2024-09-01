@@ -48,6 +48,57 @@ const swiperTours = new Swiper('.tours__swiper', {
   }
 });
 
+const swiperTraining = new Swiper('.training__swiper', {
+  modules: [Navigation],
+  navigation: {
+    nextEl: '.training__button-next',
+    prevEl: '.training__button-prev',
+  },
+  autoHeight: true,
+  breakpoints: {
+    320: {
+      initialSlide: 2,
+      slidesPerView: 1,
+      simulateTouch: true,
+    },
+    768: {
+      initialSlide: 0,
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1440: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      simulateTouch: false,
+    }
+  }
+});
+
+const swiperReviews = new Swiper('.reviews__swiper', {
+  modules: [Navigation],
+  navigation: {
+    nextEl: '.reviews__button-next',
+    prevEl: '.reviews__button-prev',
+  },
+  autoHeight: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      simulateTouch: true,
+    },
+    768: {
+      slidesPerView: 1.265,
+      spaceBetween: 30,
+      simulateTouch: true,
+    },
+    1440: {
+      slidesPerView: 1.756,
+      spaceBetween: 120,
+      simulateTouch: false,
+    }
+  }
+});
+
 export {
-  swiperHero, swiperTours
+  swiperHero, swiperTours, swiperTraining, swiperReviews
 };

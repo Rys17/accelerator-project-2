@@ -1,0 +1,96 @@
+.navigation {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    gap: 4px;
+  }
+}
+
+.navigation__button {
+  position: relative;
+  width: 37px;
+  height: 35px;
+  background-color: $primary-blue;
+  border: 1px solid transparent;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 13px;
+    height: 1px;
+    background-color: $primary-white;
+    translate: -50% -50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 11px;
+    width: 4px;
+    height: 4px;
+    border-bottom: 1px solid $primary-white;
+    border-right: 1px solid $primary-white;
+    rotate: -45deg;
+    translate: 0 -50%;
+  }
+
+  &--prev {
+    rotate: 180deg;
+  }
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $active;
+
+    &::before {
+      background-color: $active;
+    }
+
+    &::after {
+      border-color: $active;
+    }
+  }
+
+  &:focus-visible {
+    background-color: transparent;
+    outline: none;
+
+    &::before {
+      background-color: $active;
+    }
+
+    &::after {
+      border-color: $active;
+    }
+  }
+
+  &:active {
+    background-color: $active;
+
+    &::before {
+      background-color: $primary-white;
+    }
+
+    &::after {
+      border-color: $primary-white;
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+    background-color: $disabled-gray;
+
+    &::before {
+      background-color: $primary-white;
+    }
+
+    &::after {
+      border-color: $primary-white;
+    }
+  }
+}

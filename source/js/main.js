@@ -1,6 +1,8 @@
 import {
   swiperHero,
-  swiperTours
+  swiperTours,
+  swiperTraining,
+  swiperReviews
 } from './swiper.js';
 
 import {
@@ -10,3 +12,5 @@ import {
 navBurgerInit();
 swiperHero();
 swiperTours();
+swiperTraining();
+swiperReviews();
