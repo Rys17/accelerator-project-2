@@ -1,5 +1,20 @@
 .hero {
   color: $primary-white;
+
+}
+
+.hero__swiper.swiper {
+
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 100px;
+  }
+
 }
 
 .hero__swiper-slide {
