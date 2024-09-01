@@ -1,6 +1,7 @@
 import {
-  swiperHero
-} from './hero-slider.js';
+  swiperHero,
+  swiperTours
+} from './swiper.js';
 
 import {
   navBurgerInit
@@ -8,3 +9,4 @@ import {
 
 navBurgerInit();
 swiperHero();
+swiperTours();
