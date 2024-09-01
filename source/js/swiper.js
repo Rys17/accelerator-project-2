@@ -99,6 +99,49 @@ const swiperReviews = new Swiper('.reviews__swiper', {
   }
 });
 
+const swiperAdv = new Swiper('.adv__swiper', {
+  modules: [Navigation],
+  navigation: {
+    nextEl: '.adv__button-next',
+    prevEl: '.adv__button-prev',
+  },
+  enabled: false,
+  breakpoints: {
+    1440: {
+      enabled: true,
+      slidesPerView: 'auto',
+      initialSlide: 3,
+      spaceBetween: 30,
+      centeredSlides: true,
+      loop: true,
+      slidesPerGroup: 2,
+      simulateTouch: false,
+    }
+  }
+});
+
+const swiperGallery = new Swiper('.gallery__swiper', {
+  modules: [Navigation],
+  navigation: {
+    nextEl: '.gallery__button-next',
+    prevEl: '.gallery__button-prev',
+  },
+  loop: true,
+  breakpoints: {
+    320: {
+      spaceBetween: 5,
+      slidesPerView: 2,
+    },
+    768: {
+      spaceBetween: 5,
+      slidesPerView: 3,
+    },
+    1440: {
+      enabled: false,
+    },
+  }
+});
+
 export {
-  swiperHero, swiperTours, swiperTraining, swiperReviews
+  swiperHero, swiperTours, swiperTraining, swiperReviews, swiperAdv, swiperGallery
 };

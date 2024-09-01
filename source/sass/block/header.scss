@@ -142,6 +142,8 @@
   padding: 0;
   border: 0;
   mask-image: url("/__spritemap#sprite-menu-view");
+  mask-repeat: no-repeat;
+
 
   @media (min-width: $desktop-width) {
     display: none;

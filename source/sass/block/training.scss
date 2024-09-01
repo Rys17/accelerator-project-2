@@ -354,7 +354,8 @@
   }
 
   &:nth-child(2)::before {
-    background-image: url("/__spritemap#sprite-boots-view");
+    mask-image: url("/__spritemap#sprite-boots-view");
+    background-color: rgba(45, 56, 63, 1);
   }
 
   &:nth-child(3)::before {
